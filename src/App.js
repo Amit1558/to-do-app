@@ -1,6 +1,4 @@
 import {useRef, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSave } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 let index = 0;
@@ -53,8 +51,8 @@ function App() {
                 <div className='a-todo-list'>
                   <div className='a-title' key={index}>{ele}</div>
                   <div className='a-button-container'>
-                    <button className='a-edit' onClick={(e) => { onEdit(index) }}>Edit</button>
-                    <button className='a-edit'onClick={(e) => { onDelete(index) }}>Delete</button>
+                    <button className='a-edit' onClick={(e) => { onEdit(index) }}>✏️</button>
+                    <button className='a-edit'onClick={(e) => { onDelete(index) }}>🗑️</button>
                   </div>
                 </div>
               )
@@ -76,7 +74,7 @@ function App() {
             Save
             </button>
             <button disabled={edit} className="a-edit" onClick={(e) => onClickEdit(e)}>
-              Edit
+            Edit
             </button>
           </form>
         </div>
